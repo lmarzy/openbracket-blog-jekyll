@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="c-post-detail c-panel">
+    
+    <header class="c-post-detail__header c-post-detail__header--{{ page.category }}">
+
+        <h1 class="c-post-detail__title">{{ page.title }}</h1>
+
+        <time datetime="{{ page.date | date: "%Y-%-m-%-d" }}" class="c-post-detail__date">{{ page.date | date: "%b %-d, %Y" }}</time>
+
+        <span class="">{% if page.author %}{{ page.author }}{% endif %}</span>
+        {% if page.meta %} • {{ page.meta }}{% endif %}
+
+    </header>
+    
+    <div class="c-post-detail__content">
+
+        {{ content }}
+
+        {% include disqus.html disqus_identifier=page.disqus_identifier %}
+
+    </div>
+
+</article>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<section class="c-posts c-panel">
+    
+    <h1 class="c-posts__title">Posts</h1>
+
+    {% include post-count.html %}
+
+    <ul class="c-posts-list">
+
+      {% for post in site.posts %}
+
+        <li class="c-posts-list__item">
+        
+            <article class="c-post c-post--{{ post.category }}">
+        
+                <time datetime="2015-03-27" class="c-post__date c-date">{{ post.date | date: "%b %-d, %Y" }}</time>
+
+                <span class="c-post__author">{{ post.author }}</span>
+
+                <h1 class="c-post__title">
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h1>
+
+            </article>
+
+        </li>
+
+      {% endfor %}
+
+</ul>
+
+</section>

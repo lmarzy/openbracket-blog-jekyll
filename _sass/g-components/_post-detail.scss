@@ -1,0 +1,59 @@
+/* ==========================================================================
+   COMPONENTS - POST-DETAIL
+   ========================================================================== */
+
+.c-post-detail {
+
+    &__header {
+        padding: $base-spacing;
+
+            &--html {
+                background: colour(tech, html);
+                color: white;
+            }
+            &--css {
+                background: colour(tech, css);
+                color: white;
+            }
+            &--js {
+                background: colour(tech, js);
+                color: white;
+            }
+            &--misc {
+                background: colour(tech, misc);
+                color: white;
+            }
+    }
+
+    &__title {
+        margin-bottom: $base-spacing;
+        font-size: toRem(28px);
+    }
+
+    &__date {
+        display: inline-block;
+        margin-right: toRem(6px);
+        padding-right: toRem(8px);
+        border-right: 1px solid rgba(colour(brand, b),0.2);
+        text-transform: uppercase;
+    }
+
+    &__content {
+        padding: $base-spacing;
+        font-size: toRem(20px);
+            
+            h2 {
+                @include vr(22px, 1, 1);
+                font-weight: 700;
+            }
+
+            ul {
+                margin: $base-spacing;
+
+                    li {
+                        list-style: circle;
+                    }
+            }
+    }
+
+}

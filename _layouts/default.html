@@ -1,0 +1,39 @@
+<!doctype html>
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<html class="no-js" lang="en">
+<head>
+
+  {% include head.html %} 
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+  {% include icons.html %}
+
+  {% include header.html %}
+  
+  <main class="c-main o-wrap" itemscope itemprop="mainContentOfPage">
+    
+    <div class="o-grid">
+        
+        <div class="o-grid__item one-whole bp20-two-thirds">
+            
+            {{ content }}
+
+        </div>    
+
+        <div class="o-grid__item one-whole bp20-one-third">
+            
+            {% include sidebar.html %}
+        
+        </div>
+
+    </div>
+
+  </main> <!-- !END main.l-main -->
+  
+  {% include footer.html %}
+
+</body>
+</html>

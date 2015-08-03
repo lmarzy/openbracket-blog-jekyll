@@ -1,0 +1,21 @@
+# Site settings
+title: Open-Bracket Blog
+email: me@phz3.net
+description: "Front end development blog of Lee Marsden containing web musings, news and tutorials."
+url: "http://www.openbracket.co.uk" # the base hostname & protocol for your site
+twitter_username: phzthree
+github_username:  lmarzy
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      author: Lee Marsden
+      comments: true
