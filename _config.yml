@@ -2,7 +2,6 @@
 title: Open-Bracket Blog
 email: me@phz3.net
 description: "Front end development blog of Lee Marsden containing web musings, news and tutorials."
-baseurl: '/openbracket-blog-jekyll'
 url: "http://www.openbracket.co.uk" # the base hostname & protocol for your site
 twitter_username: phzthree
 github_username:  lmarzy
