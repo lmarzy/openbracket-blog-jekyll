@@ -5,13 +5,13 @@
  * Syntax highlighting styles
  */
 .highlight {
-    margin-bottom: $base-spacing;
+    margin: 0 0 $base-spacing 0;
     background: linear-gradient(to bottom,
-    darken(#F8F8F8,2) 0%, 
+    darken(#F8F8F8,2) 0%,
     darken(#F8F8F8,2) 26px,
     darken(#F8F8F8,6) 26px,
     darken(#F8F8F8,6) 27px,
-    #F8F8F8 27px, 
+    #F8F8F8 27px,
     #F8F8F8 100%
     ); /* W3C */
     border: 1px solid darken(#F8F8F8, 6);
