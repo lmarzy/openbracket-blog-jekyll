@@ -2,9 +2,9 @@
 category: css
 ---
 
-In my opinion definition lists are underused on the web, they work in a bunch of situations and provide great semantics, they do however make life a little harder when it comes to styling especially when you want the elements to line up side by side.
+In my opinion definition lists are underused on the web, they work in a bunch of situations and provide great semantics. They do however make life a little harder when it comes to styling especially when you want the elements to line up side by side.
 
-By default <dt>s and <dd>s have display block set meaning we get the elements stacked, in order to turn these into elements that sit side by side we usually fall back to one of the following techniques:
+By default <dt>s and <dd>s have display block set, meaning we get the elements stacked. In order to turn these into elements that sit side by side we usually fall back to one of the following techniques:
 
 - Floats: not a flexible approach
 - Adding &lt;br&gt;s after each <dd> and setting both the <dt> and <dd> as display: inline: this is invalid markup
