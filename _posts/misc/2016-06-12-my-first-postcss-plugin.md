@@ -2,7 +2,7 @@
 category: misc
 ---
 
-PostCss is a fairly new way of writing css, it seems to be getting a lot of attention and for good reason I think. Don't get me wrong I am a big fan of pre-processors such as Sass and Stylus, but PostCss opens up the doors to create a way of working exactly in tune with what you want. Pre-processors give you a lot of of functionality which can be a great thing but you may not want or need all of this, with PostCss you can choose what you want and even create your own plugins to do a very specific job which is exactly what I did.
+PostCss is a fairly new way of writing css, it seems to be getting a lot of attention and for good reason I think. Don't get me wrong I am a big fan of pre-processors such as Sass and Stylus, but PostCss opens up the doors to create a way of working exactly in tune with what you want. Pre-processors give you a lot of functionality which can be a great thing but you may not want or need all of this, with PostCss you can choose what you want and even create your own plugins to do a very specific job which is exactly what I did.
 
 When I started with PostCss I needed to re-create some of the functionality that I got with my pre-processor, one of these was the ability to keep a good vertical rhythm which I did through a function to calculate the line height based on the base font-size and line-height. I did some searching but could not find anything that exactly matched my needs so I decided to create my own.
 
