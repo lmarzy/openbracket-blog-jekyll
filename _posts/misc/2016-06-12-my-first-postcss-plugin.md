@@ -14,4 +14,4 @@ I have now published this plugin to NPM so you can read more about it there and 
 
 Check it out [postcss-vr](https://www.npmjs.com/package/postcss-vr)
 
-As always any feedback/bugs please let me know.
+As always any feedback/bugs reposts please let me know.
