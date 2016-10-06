@@ -2,7 +2,7 @@
 category: js
 ---
 
-Let's check out the Array helper of find. The purpose of the find helper is to search through an Array and look for a particular element, as soon as an element is found the helper will return that record.
+Let's check out the Array helper of find. The purpose of the find helper is to search through an Array and look for a particular value, as soon as an value is found the helper will return that record.
 
 If you have been writing any JS for a period of time you have probably needed to find a value in an array, and you have probably used a for loop to achieve this as shown:
 
@@ -25,7 +25,7 @@ console.log(user); // {name: 'Jack'}
 
 As you can see we have our Array, in this case we have an Array of Objects and we loop through each item and if we find the user we are looking for we update our variable, we could make this slightly better by adding a 'break;' at the bottom of the if statement to stop the loop continuing once we have a match.
 
-Lets re-create the above now using the Array find helper. The helper works by walking through each element in the Array, each element is then passed into an iterator function which returns a truthy or a falsy value. The find helper will keep calling elements with the iterator function until the function returns true. Once true is returned the find helper immediately exits it's iteration returning the element it finds:
+Lets re-create the above now using the Array find helper. The helper works by walking through each element in the Array, each element is then passed into an iterator function which returns a truthy or a falsy value. The find helper will keep calling elements with the iterator function until the function returns true, if no value if found undefined is returned. Once true is returned the find helper immediately exits it's iteration, returning the element it finds:
 
 {% highlight javascript %}
 const users = [
