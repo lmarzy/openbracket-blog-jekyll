@@ -41,7 +41,7 @@ const user = users.find(function(user) {
 console.log(user); // {name: 'Jack'}
 {% endhighlight %}
 
-The above find helper, I hope you can see is less code and much easier to read, we could of course get the code even smaller if we wanted using the new ES2015 arrow function syntax:
+As you can see the Array find helper is less code and much easier to read, we could of course get the code even smaller if we wanted using the new ES2015 arrow function syntax:
 
 {% highlight javascript %}
 const users = [
@@ -55,7 +55,7 @@ const user = users.find(user => user.name === 'Jack');
 console.log(user); // {name: 'Jack'}
 {% endhighlight %}
 
-One thing to bear in mind with this helper is as soon as an element is found in the array the value is returned, therefore if you have duplicates values in the Array only the first item that is found will be returned. So if we had two elements in the above with the same name only the first item would be returned.
+One thing to bear in mind with this helper is as soon as an element is found in the Array the value is returned, therefore if you have duplicate values in the Array, only the first item that is found will be returned. So if we had two elements in the above with the same name only the first item would be returned:
 
 {% highlight javascript %}
 const users = [
@@ -70,6 +70,6 @@ const user = users.find(user => user.name === 'Jack');
 console.log(user); // {name: 'Jack', id: 222}
 {% endhighlight %}
 
-Hopefully you will have a go at using this the next time you need to find an element in an Array.
+Give it a try the next time you need to find an element in an Array, you might just like it!
 
 Have fun!
