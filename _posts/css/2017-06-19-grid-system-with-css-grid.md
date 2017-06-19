@@ -4,12 +4,13 @@ category: css
 
 I have been putting off looking into the new CSS grid, mainly due to the projects I was working on needing older browser support and me being a little idle, but as CSS grid is now available in most modern browsers I decided it was time to take a peek.
 
-As with anything I want to learn, I find the hands on approach much better, I therefore decided to see if I could create a typical grid system. You know the thing that we have enough of to enable us to use a new one on a daily basis for our entire career. That being said I have typically always used my own grid system using our good friend 'float' so though it would makes sense to see if I could bring this up to date.
+As with anything I want to learn, I find the hands on approach much better. I therefore decided to see if I could create a typical grid system. You know the thing that we have enough of to enable us to use a new one on a daily basis for our entire career. That being said I have typically always used my own grid system using our good friend 'float' so thought it would makes sense to see if I could bring this up to date.
 
-So what is this CSS grid. Well according the docs or something I may have read it's the most powerful layout system available in CSS. Wow, sounds pretty intimidating! The long and short of it is that we have been waiting a long time for CSS to give us a proper way to layout our sites and now I think we might just have it.  
-CSS grid is a two dimensional layout system which works by applying rules to both a parent(the grid container) and the children(the grid items).  
+So what is this CSS grid?. Well according to the docs or something I may have read it's the most powerful layout system available in CSS. Wow, sounds pretty intimidating! The long and short of it is that we have been waiting a long time for CSS to give us a proper way to layout our sites and now I think we might just have it.  
 
-Let's have a look at setting up a simple grid using plain old css, lets create a simple 2 column layout.
+CSS grid is a two dimensional layout system which works by applying rules to both a parent (the grid container) and the children (the grid items).  
+
+Let's have a look at setting up a simple grid using plain old CSS, lets create a simple 2 column layout.
 
 
 {% highlight html %}
@@ -30,7 +31,7 @@ Let's look at the '.grid' class first:
 }
 {% endhighlight %}
 
-We first set the display to 'grid'. To set the amount of columns we want, we use the repeat keyword passing in 12 as the columns and the amount we want each column to span we used 1fr meaning 1 fraction so the columns evenly space out. Lastly we set the 'grid-gap' to 20 px, this will give a gap of 20px between each column. No more negative margins or having to target the last column to remove the space at the end, happy times.
+We first set the display to 'grid'. We then set the amount of columns we would like our grid to be, for this we used the keyword repeat passing in 12 and 1fr. This is saying I want 12 columns and each column to span an equal 1 fraction. Lastly we set the 'grid-gap' to 20 px, this will give a gap of 20px between each column. No more negative margins or having to target the last column to remove the space at the end, happy times.
 
 Now we'll look at the '.half' classes:
 
@@ -40,7 +41,7 @@ Now we'll look at the '.half' classes:
 }
 {% endhighlight %}
 
-Pretty simple right, I'm telling the element to span 6 columns, as we set the parent to give us 12 columns this element now spans 6 of those giving us a 2 column layout.
+Pretty simple right?, I'm telling the element to span 6 columns, as we set the parent to give us 12 columns this element now spans 6 of those giving us a 2 column layout.
 
 As you can see this is actually really simple to create a grid system using CSS grid, once you have the parent set, all you have to do is create all the classes for each column width you need based on the number of columns you set on the parent. So for example in the above we set 'grid-template-columns' to 12, we now need a child class for each of the 12 columns(1 through 12).
 
@@ -57,7 +58,7 @@ All the way up to:
 }
 {% endhighlight %}
 
-This is all well and good but who creates non responsive sites anymore and uses plain old css for that matter, Let's look at one way we could tackle this with my favorite preprocessor Sass.
+This is all well and good but who creates non responsive sites anymore and uses plain old CSS for that matter, Let's look at one way we could tackle this with my favorite preprocessor Sass.
 
 To get this to work in a much more automated way I used a combination of variables, loops and some mixins.
 
@@ -212,8 +213,8 @@ Etc, etc...
 
 Now all we have to do is decorate out HTML with the required classes, so if we wanted a column to be full width at defaut(before any breakpoint) and then half at the first breakpoint(10) and finally a third at the last breakpoint(20) we would do the following:
 
-{% highlight css %}
-<div class="span12 span6@bp10 span4@bp20></div>
+{% highlight html %}
+<div class="span12 span6@bp10 span4@bp20"></div>
 {% endhighlight %}
 
 This is now a little more involved but as you can see with a little help form Sass we now have a fully functioning grid system that works across all breakpoints.
